@@ -117,6 +117,17 @@ body {
   background-color: #dddddde8;
 }
 
+.cart__item-btn-item{
+  background-color: rgb(226, 168, 168);
+  border: none;
+  border-radius: 20%;
+}
+.cart__item-btn-item > i {
+  color: red;
+  text-align: center;
+  padding: 2px 3px;
+  font-weight: 600;
+}
 .navbar__nav.active .navbar__list {
   opacity: 1;
   height: auto;
