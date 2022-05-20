@@ -35,7 +35,7 @@ body {
 }
 
 .navbar {
-  background-color: white;
+  background-color: rgb(223, 222, 222);
   height: var(--navbar-height);
   border-bottom: 1px solid #f0f0f0;
 }
@@ -63,10 +63,12 @@ body {
 
 .navbar__logo-text {
   font-size: var(--text-size);
+  font-weight: 600;
 }
 
 .navbar__logo-icon {
   font-size: var(--icons-size);
+  font-weight: 600;
 }
 
 .navbar__list {
@@ -77,6 +79,7 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+  font-weight: 600;
 }
 
 .navbar__link {
@@ -135,7 +138,8 @@ body {
 
 .about {
   background-image: url("https://static.vecteezy.com/system/resources/previews/005/132/102/large_2x/flowers-store-and-plants-shop-with-florists-care-organic-natural-products-for-home-garden-green-decoration-in-flat-background-illustration-vector.jpg");
-  background-size: cover;
+  background-image: url("https://logodownload.org/wp-content/uploads/2014/09/lenovo-logo-1-1.png");
+  background-size: cover ;
   background-position: center;
   padding: 20px;
 }
@@ -202,6 +206,12 @@ body {
 }
 .wrapper__product-img-item{
   border-radius: 10%;
+  width: 250px;
+  height: auto;
+}
+.cart__item{
+  background-color: #dddddde8;
+  padding: 5px 0;
 }
 .cart__item-img > img{
   border-radius: 50%;
@@ -233,7 +243,6 @@ body {
   height: auto;
   width: 100%;
 }
-
 .footer {
   background-color: #dddddde8;
   padding: 20px;
