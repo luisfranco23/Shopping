@@ -1,0 +1,271 @@
+:root {
+  --navbar-height: 60px;
+  --text-size: 16px;
+  --icons-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --text-size: 18px;
+    --icons-size: 20px;
+  }
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  background-color: #eeeded;
+}
+
+.navbar {
+  background-color: white;
+  height: var(--navbar-height);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar__logo {
+  padding-left: 15px;
+}
+
+.navbar__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar__logo-text {
+  font-size: var(--text-size);
+}
+
+.navbar__logo-icon {
+  font-size: var(--icons-size);
+}
+
+.navbar__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hasta */
+@media screen and (max-width: 768px) {
+  .navbar__nav {
+    position: absolute;
+    top: var(--navbar-height);
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    opacity: 0;
+    height: 0;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.navbar__nav.active {
+  padding: 20px 0;
+  height: auto;
+}
+
+.navbar__nav.active .navbar__list {
+  opacity: 1;
+  height: auto;
+}
+
+.navbar__btn {
+  padding-right: 15px;
+}
+
+.navbar__btn-link {
+  background-color: white;
+  border: none;
+  outline: none;
+  color: #333;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/005/132/102/large_2x/flowers-store-and-plants-shop-with-florists-care-organic-natural-products-for-home-garden-green-decoration-in-flat-background-illustration-vector.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.about__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about__content {
+  width: 100%;
+  background-color: #dddddde8;
+  padding: 8px;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* border: 1px solid blueviolet; */
+}
+.wrapper__products{
+  padding-right: 20px;
+}
+
+.wrapper__container {
+  padding: 20px;
+  background-color: #dddddde8;
+  border-radius: 10px;
+}
+.wrapper__sidebar-cart-btn{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.wrapper__sidebar-cart-btn > button{
+  background-color: rgb(76, 76, 250);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.wrapper__sidebar-cart-btn-text{
+  color: white;
+  font-weight: 400;
+}
+.wrapper__sidebar-cart-total-price{
+  font-weight: 600;
+}
+.wrapper__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.cart__item-img{
+  display: flex;
+}
+.wrapper__product-img-item{
+  border-radius: 10%;
+}
+.cart__item-img > img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.wrapper__product-btn > span{
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.wrapper__product-btn-item{
+  background-color: rgb(76, 76, 250);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.wrapper__product-btn-item > i{
+  color: white;
+}
+.wrapper__product-btn-text{
+  padding: 10px;
+  color: white;
+}
+
+.wrapper__sidebar {
+  padding: 10px;
+  background-color: #dddddde8;
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.footer {
+  background-color: #dddddde8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Desde */
+
+@media screen and (min-width: 500px) {
+  .about__content {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .wrapper__container {
+    width: 70%;
+  }
+
+  .wrapper__sidebar {
+    width: 30%;
+  }
+
+  .navbar__btn-link {
+    visibility: hidden;
+  }
+
+  .about__content {
+    width: 35%;
+  }
+}
